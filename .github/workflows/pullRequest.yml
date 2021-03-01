@@ -1,0 +1,12 @@
+name: Pull Request
+on:
+  pull_request:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install modules
+        run: yarn
+      - name: Run Unit Tests
+        run: yarn test
