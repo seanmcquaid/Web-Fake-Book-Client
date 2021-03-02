@@ -3,10 +3,31 @@ on:
   pull_request:
     branches: [main]
 jobs:
-  build:
+  unit-tests:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup GHA
+        uses: actions/checkout@v2
       - name: Install modules
-        run: yarn
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install
       - name: Run Unit Tests
-        run: yarn test
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: test
+  cypress-tests:
+    runs-on: ubuntu-16.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Make envfile
+        uses: SpicyPizza/create-envfile@v1
+        with:
+          envkey_REACT_APP_API_URL: ${{secrets.REACT_APP_API_URL}}
+          file_name: .env
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          start: yarn start
+          wait-on: http://localhost:3000
