@@ -18,7 +18,6 @@ const GlobalStyles = createGlobalStyle`
     min-width: 100vw;
     margin: 0;
     padding: 0;
-    position: relative;
     background-color: ${constants.darkBackgroundColor};
     color: ${constants.foregroundColor};
     font-family: ${constants.normalFont};
