@@ -11,11 +11,11 @@ const App: React.FC = () => (
   <BrowserRouter>
     <Layout>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/addChart" component={AddChart} />
-        <Route exact path="/charts" component={Charts} />
-        <Route exact path="/chartInfo/:id" component={ChartInfo} />
-        <Route exact path="/editChart/:id" component={EditChart} />
+        <Route exact path='/' component={Home} />
+        <Route exact path='/addChart' component={AddChart} />
+        <Route exact path='/charts' component={Charts} />
+        <Route exact path='/chartInfo/:id' component={ChartInfo} />
+        <Route exact path='/editChart/:id' component={EditChart} />
         <Route component={Error} />
       </Switch>
     </Layout>
