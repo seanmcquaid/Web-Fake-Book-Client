@@ -15,3 +15,5 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: 'web-fake-book-client'
           heroku_email: 'sean.m.mcquaid@gmail.com'
+        env:
+          HD_REACT_APP_API_URL: ${{secrets.REACT_APP_PROD_API_URL}}
