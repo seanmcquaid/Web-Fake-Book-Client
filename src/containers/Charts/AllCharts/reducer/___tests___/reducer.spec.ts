@@ -85,7 +85,7 @@ describe('AllCharts - Reducer', () => {
         },
       ],
       searchText: '',
-      totalPages: 0,
+      totalPages: 1,
       currentPage: 0,
       errorMessage: '',
     });

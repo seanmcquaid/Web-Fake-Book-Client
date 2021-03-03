@@ -29,7 +29,7 @@ const reducer = (state: AllChartsStateTypes, action: AllChartsActionTypes) => {
         isLoading: false,
         totalPages: Math.ceil(
           action.payload.charts.length / 5 < 1
-            ? 0
+            ? 1
             : action.payload.charts.length / 5
         ),
       };
