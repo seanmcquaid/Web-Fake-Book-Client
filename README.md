@@ -1,5 +1,37 @@
 # Web Fake Book - Client
 
+## Project Setup
+
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+
+```
+yarn dev
+```
+
+### Compiles and minifies for production
+
+```
+yarn build
+```
+
+### Run your unit tests
+
+```
+yarn test
+```
+
+### Run your end-to-end tests
+
+```
+yarn cypress
+```
+
+##
+
 ## Architecture
 
 - React + TypeScript
